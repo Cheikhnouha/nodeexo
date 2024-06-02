@@ -18,11 +18,7 @@ app.post('/data',(req,res)=>{
   const data = req.body;
   res.send(`received data:${JSON.stringify(data)}`)
 })
-
-
-
 })
-
 app.listen(port,()=>{
- console.log(`veuillez afficher mon application: ${port}`)
+console.log(`veuillez afficher mon application: ${port}`)
 })
