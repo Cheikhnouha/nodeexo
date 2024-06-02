@@ -1,8 +1,12 @@
 const express = require('express');
 const nodemon = require('nodemon')
-const port = 3000;
+const bodyParser = require('body-parser')
 
+const port = 3000;
 const app = express();
+
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json())
 app.use(express.json())
 
 app.get('/',(req,res)=>{
